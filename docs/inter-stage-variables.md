@@ -2,6 +2,8 @@
 
 > [tutorial](https://webgpufundamentals.org/webgpu/lessons/webgpu-inter-stage-variables.html)
 
+Inter-stage Variables are used to pass data from vertex shader to fragment shader. Here the vertex shader output extra color values by declare a custom struct: _OurVertexShaderOutput_. In the fragment shader, we declare it to take one of these structs as an argument to the function and finally returning the color.
+
 ```js eval
 drawTriangleWithShader({
   label: "our hardcoded rgb triangle shaders",
@@ -39,6 +41,10 @@ drawTriangleWithShader({
 });
 ```
 
+## Connect by _location_
+
+Inter-stage Variables are connected by _location_. They can access the same variables at the specified location.
+
 ```js eval
 drawTriangleWithFragmentShader(`
   @fragment fn fs(@location(0) color: vec4f) -> @location(0) vec4f {
@@ -46,6 +52,10 @@ drawTriangleWithFragmentShader(`
   }
 `);
 ```
+
+## _@builtin(position)_
+
+_@builtin(position)_ is not a inter-stage variable. For vertex shader, it is the output coordinate that the GPU used to draw triangles/lines/points, while it is the input coordinate of the the pixel that being asked to compute a color for fragment shader.
 
 ```js eval
 drawTriangleWithShader({
@@ -81,6 +91,8 @@ drawTriangleWithShader({
   `,
 });
 ```
+
+Although the fact that vertex shader and fragment shader are in the same string is a convenience, it is better to split them into separate modules. In this way, you won't duplicate all of them, once for each entry point.
 
 ```js eval t=braces
 {
