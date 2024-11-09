@@ -10,7 +10,10 @@ export default defineConfig({
   themeConfig: {
     sidebar: [
       {
-        items: [{ text: "Fundamentals", link: "/fundamentals" }],
+        items: [
+          { text: "Fundamentals", link: "/fundamentals" },
+          { text: "Inter-stage Variables", link: "/inter-stage-variables" },
+        ],
       },
     ],
     socialLinks: [
