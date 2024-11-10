@@ -9,3 +9,4 @@ I learn this because I want to write a WebGPU renderer for [Charming.js](https:/
 ## Notes
 
 - 2024-11-03: [Fundamentals](./fundamentals.md)
+- 2024-11-08: [Inter-stage Variable](./inter-stage-variables.md)
