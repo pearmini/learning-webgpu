@@ -7,6 +7,7 @@ const props = {
   Theme: DefaultTheme,
   transform: {
     braces: (code) => `(() => ${code})()`,
+    call: (foo) => `(${foo})()`,
   },
 };
 

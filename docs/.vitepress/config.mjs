@@ -13,6 +13,7 @@ export default defineConfig({
         items: [
           { text: "Fundamentals", link: "/fundamentals" },
           { text: "Inter-stage Variables", link: "/inter-stage-variables" },
+          { text: "Uniforms", link: "/uniforms" },
         ],
       },
     ],
