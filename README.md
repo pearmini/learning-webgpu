@@ -10,3 +10,4 @@ I learn this because I want to write a WebGPU renderer for [Charming.js](https:/
 
 - 2024-11-03: [Fundamentals](https://webgpu.bairui.dev/fundamentals.html)
 - 2024-11-08: [Inter-stage Variable](https://webgpu.bairui.dev/inter-stage-variables)
+- 2024-11-13: [Uniforms](https://webgpu.bairui.dev/uniforms)
